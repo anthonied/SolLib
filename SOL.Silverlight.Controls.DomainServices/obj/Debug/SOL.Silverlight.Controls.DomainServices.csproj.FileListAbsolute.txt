@@ -1,0 +1,1 @@
+C:\Development\Private\Sol Libraries\SOL.Silverlight.Controls.DomainServices\obj\Debug\ResolveAssemblyReference.cache

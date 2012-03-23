@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOL.Core", "Desktop\SOL.Core\SOL.Core.csproj", "{3A6C7514-9BF8-42B4-806A-007E1E7F6399}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{B5D90EB5-0DF1-49A5-932A-21A681B3F304}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{788A9D10-187D-48B5-BA75-94D4FCD13CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOL.Core", "Silverlight\SOL.Core\SOL.Core.csproj", "{84E625F1-F106-454F-9907-BD4BA643E259}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A6C7514-9BF8-42B4-806A-007E1E7F6399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6C7514-9BF8-42B4-806A-007E1E7F6399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6C7514-9BF8-42B4-806A-007E1E7F6399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6C7514-9BF8-42B4-806A-007E1E7F6399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E625F1-F106-454F-9907-BD4BA643E259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E625F1-F106-454F-9907-BD4BA643E259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E625F1-F106-454F-9907-BD4BA643E259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E625F1-F106-454F-9907-BD4BA643E259}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A6C7514-9BF8-42B4-806A-007E1E7F6399} = {B5D90EB5-0DF1-49A5-932A-21A681B3F304}
+		{84E625F1-F106-454F-9907-BD4BA643E259} = {788A9D10-187D-48B5-BA75-94D4FCD13CE0}
+	EndGlobalSection
+EndGlobal

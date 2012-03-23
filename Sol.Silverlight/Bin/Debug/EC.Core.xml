@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EC.Core</name>
+    </assembly>
+    <members>
+        <member name="T:EC.Reflection.ReflectionHelper">
+            <summary>
+            Provides a set of static methods for manipulating objects using expressions.
+            </summary>
+        </member>
+        <member name="M:EC.Reflection.ReflectionHelper.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Gets the name of the property specified by the expression.
+            </summary>
+            <typeparam name="T">The type to find the property.</typeparam>
+            <param name="propertySelector">The expression specifying the property.</param>
+            <returns>The name of the property.</returns>
+        </member>
+        <member name="M:EC.Reflection.ReflectionHelper.GetPropertyExpression``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Gets the property <see cref="T:System.Linq.Expressions.Expression"/> specified by the property selector.
+            </summary>
+            <typeparam name="T">The type of the object on which to get the property expression.</typeparam>
+            <param name="propertySelector">The property selector expression.</param>
+            <returns>The <see cref="T:System.Linq.Expressions.MemberExpression"/> for the property specified by the selector if found; otherwise, null.</returns>
+        </member>
+        <member name="M:EC.Reflection.ReflectionHelper.GetPropertyInfo``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            Gets the <see cref="T:System.Reflection.PropertyInfo"/> specified by the property selector.
+            </summary>
+            <typeparam name="T">The type of the object on which to get the property information.</typeparam>
+            <param name="propertySelector">The property selector expression.</param>
+            <returns>The <see cref="T:System.Reflection.PropertyInfo"/> for the property specified by the selector if found; otherwise, null.</returns>
+        </member>
+        <member name="T:EC.Reflection.PropertyMapping`2">
+            <summary>
+            Represents a property to property mapping on an object.
+            </summary>
+            <typeparam name="TSource">The type of the source object to map from.</typeparam>
+            <typeparam name="TTarget">The type of the source object to map to.</typeparam>
+        </member>
+        <member name="M:EC.Reflection.PropertyMapping`2.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`1,System.Object}},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EC.Reflection.PropertyMapping`2"/> class with the property selector.
+            </summary>
+            <param name="sourcePropertySelector">The source property expression.</param>
+            <param name="targetPropertySelector">The target property expression.</param>
+            <param name="isRequired">Indicates if a value is required for the mapping.</param>
+        </member>
+        <member name="P:EC.Reflection.PropertyMapping`2.SourcePropertySelector">
+            <summary>
+            Gets the source property expression.
+            </summary>
+        </member>
+        <member name="P:EC.Reflection.PropertyMapping`2.TargetPropertySelector">
+            <summary>
+            Gets the target property expression.
+            </summary>
+        </member>
+        <member name="P:EC.Reflection.PropertyMapping`2.IsRequired">
+            <summary>
+            Indicates if a vlues is required for the mapping.
+            </summary>
+        </member>
+        <member name="T:EC.StringExtensions">
+            <summary>
+            Provides a set of static methods for manipulating <see cref="T:System.String"/> objects.
+            </summary>
+        </member>
+        <member name="M:EC.StringExtensions.ConvertTo(System.String,System.Type,System.String)">
+            <summary>
+            Converts the specified string to the specified target type.
+            </summary>
+            <param name="sourceValue">The value to convert.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> to convert the value to.</param>
+            <param name="format">The custom format to use during conversion.</param>
+            <returns>The value converted to the specified type.</returns>
+        </member>
+        <member name="T:EC.Reflection.ObjectMapper`2">
+            <summary>
+            Represents a class to map members of one object to another.
+            </summary>
+            <typeparam name="TSource">The type of the source object to map from.</typeparam>
+            <typeparam name="TTarget">The type of the target object to map to.</typeparam>
+        </member>
+        <member name="M:EC.Reflection.ObjectMapper`2.#ctor(System.Func{`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EC.Reflection.ObjectMapper`2"/> class
+            with the specified method to construct the target type.
+            </summary>
+            <param name="targetConstructor">The method which constructs the target type.</param>
+        </member>
+        <member name="M:EC.Reflection.ObjectMapper`2.MapProperty(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{`1,System.Object}},System.Boolean)">
+            <summary>
+            Maps the source property to the target property, and optionally indicates if a source value is required.
+            </summary>
+            <param name="sourcePropertySelector">The source property expression.</param>
+            <param name="targetPropertySelector">The target property expression.</param>
+            <param name="isRequired">Indicates if a source value is required.</param>
+            <returns>This instance configured with the property mapping.</returns>
+        </member>
+        <member name="M:EC.Reflection.ObjectMapper`2.MapProperties(System.Collections.Generic.IEnumerable{EC.Reflection.PropertyMapping{`0,`1}})">
+            <summary>
+            Maps the range of properties.
+            </summary>
+            <param name="propertyMappings">The mappings to include.</param>
+            <returns>This instance configured with the property mappings.</returns>
+        </member>
+        <member name="M:EC.Reflection.ObjectMapper`2.Map(`0)">
+            <summary>
+            Creates a new instance of <typeparamref name="TTarget"/> and maps
+            the configured properties from the specified source to the new instance.
+            </summary>
+            <param name="source">The source object to map the properties from.</param>
+            <returns>A new instance of <typeparamref name="TTarget"/> with the configured properties set if successfull.</returns>
+        </member>
+        <member name="T:EC.Collections.ObjectModel.ObservableCollectionExtensions">
+            <summary>
+            Provides a set of static methods for manipulating <see cref="T:System.Collections.ObjectModel.ObservableCollection`1"/> objects.
+            </summary>
+        </member>
+        <member name="M:EC.Collections.ObjectModel.ObservableCollectionExtensions.IndexOf``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Searches for the first element within the collection that satisfies the specified condition and 
+            returns the zero based index of the element.
+            </summary>
+            <typeparam name="T">The type of element in the collection.</typeparam>
+            <param name="collection">The collection to search.</param>
+            <param name="predicate">The search function used to evaluate each element.</param>
+            <returns>The zero-based index of the first element that satisfies the condition, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:EC.Collections.ObjectModel.ObservableCollectionExtensions.LastIndexOf``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Searches for the last element within the collection that satisfies the specified condition and 
+            returns the zero based index of the element.
+            </summary>
+            <typeparam name="T">The type of element in the collection.</typeparam>
+            <param name="collection">The collection to search.</param>
+            <param name="predicate">The search function used to evaluate each element.</param>
+            <returns>The zero-based index of the last element that satisfies the condition, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:EC.Collections.ObjectModel.ObservableCollectionExtensions.InsertAfterLast``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Func{``0,System.Boolean},``0)">
+            <summary>
+            Inserts an element into the collection af the last element that satisfies the specified condition.
+            </summary>
+            <typeparam name="T">The type of element in the collection.</typeparam>
+            <param name="collection">The collection to insert the object into.</param>
+            <param name="predicate">The search function used to evaluate each element.</param>
+            <param name="item">The object to insert.</param>
+        </member>
+        <member name="M:EC.Collections.ObjectModel.ObservableCollectionExtensions.InsertBeforeFirst``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Func{``0,System.Boolean},``0)">
+            <summary>
+            Inserts an element into the collection before the first element that satisfies the specified condition.
+            </summary>
+            <typeparam name="T">The type of element in the collection.</typeparam>
+            <param name="collection">The collection to insert the object into.</param>
+            <param name="predicate">The search function used to evaluate each element.</param>
+            <param name="item">The object to insert.</param>
+        </member>
+        <member name="M:EC.Collections.ObjectModel.ObservableCollectionExtensions.AddRange``1(System.Collections.ObjectModel.ObservableCollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Adds the elements of the specified collection to the end of the collection.
+            </summary>
+            <typeparam name="T">The type of element in the collection.</typeparam>
+            <param name="collection">The collection to insert the objects into.</param>
+            <param name="items">The collection whose elements should be added to the end of the collection.</param>
+        </member>
+        <member name="T:EC.TypeExtensions">
+            <summary>
+            Provides a set of static methods for querying <see cref="T:System.Type"/> objects.
+            </summary>
+        </member>
+        <member name="M:EC.TypeExtensions.IsNullableType(System.Type)">
+            <summary>
+            Gets a value indicating if the <see cref="T:System.Type"/> is a nullable type.
+            </summary>
+            <param name="type">The type to check.</param>
+            <returns>true if the type is nullable; otherwise, false.</returns>
+        </member>
+        <member name="M:EC.TypeExtensions.GetDisplayName(System.Type)">
+            <summary>
+            Gets the display name for a type. If the type is a nullable type, the name of the underlying type is returned.
+            </summary>
+            <param name="type">The type to get the display name for.</param>
+            <returns>The display name for the type.</returns>
+        </member>
+        <member name="T:EC.IO.FileInfoExtensions">
+            <summary>
+            Provides a set of static methods for manipulating <see cref="T:System.IO.FileInfo"/> objects.
+            </summary>
+        </member>
+        <member name="M:EC.IO.FileInfoExtensions.ReadAllText(System.IO.FileInfo)">
+            <summary>
+            Opens a text file, reads all lines of the file into a string, and then closes the file.
+            </summary>
+            <param name="fileInfo">The <see cref="T:System.IO.FileInfo"/> indicating which file to open for reading.</param>
+            <returns>A string containing all lines of the file.</returns>
+        </member>
+        <member name="M:EC.IO.FileInfoExtensions.ReadAllTextAsBytes(System.IO.FileInfo)">
+            <summary>
+            Opens a text file, reads all text into a byte array using UTF8 encoding, and then closes the file.
+            </summary>
+            <param name="fileInfo">The <see cref="T:System.IO.FileInfo"/> indicating which file to open for reading.</param>
+            <returns>A UTF8 byte array representing all text in the file.</returns>
+        </member>
+        <member name="M:EC.IO.FileInfoExtensions.ReadAllBytes(System.IO.FileInfo)">
+            <summary>
+            Opens a binary file, reads the contents of the file into a byte array, and then closes the file.
+            </summary>
+            <param name="fileInfo">The <see cref="T:System.IO.FileInfo"/> indicating which file to open for reading.</param>
+            <returns>A byte array containing the contents of the file.</returns>
+        </member>
+        <member name="T:EC.EnumExtensions">
+            <summary>
+            Provides a set of static methods for querying enumeration objects.
+            </summary>
+        </member>
+        <member name="M:EC.EnumExtensions.EnsureEnumType``1">
+            <summary>
+            Ensures that the specified type is an enumeration.
+            </summary>
+            <typeparam name="TEnum">The type to ensure.</typeparam>
+            <returns>The <see cref="T:System.Type"/> of the generic type.</returns>
+        </member>
+        <member name="M:EC.EnumExtensions.GetValues``1">
+            <summary>
+            Returns the list of values defined for an enumeration.
+            </summary>
+            <typeparam name="TEnum">The type of the enumeration.</typeparam>
+            <returns>The list of <typeparamref name="TEnum"/> values defined in the enumeration.</returns>
+        </member>
+        <member name="M:EC.EnumExtensions.GetStrings``1">
+            <summary>
+            Returns the names of the values defined for an enumeration.
+            </summary>
+            <typeparam name="TEnum">The type of the enumeration.</typeparam>
+            <returns>The list of names defined in the enumeration.</returns>
+        </member>
+        <member name="M:EC.EnumExtensions.Convert``1(System.Object)">
+            <summary>
+            Returns an instance of the specified enumeration set to the specified value.
+            </summary>
+            <typeparam name="TEnum">The enumeration type to which to convert the value.</typeparam>
+            <param name="value">The value to convert.</param>
+            <returns>An enumeration object whose value is set to the converted value.</returns>
+        </member>
+        <member name="T:EC.Reflection.Extensions">
+            <summary>
+            Provides a set of static methods for manipulating objects.
+            </summary>
+        </member>
+        <member name="M:EC.Reflection.Extensions.SetPropertyValue(System.Object,System.String,System.String)">
+            <summary>
+            Sets the property to the specified string value by converting it to the property type.
+            </summary>
+            <param name="entity">The object instance to set the property value on.</param>
+            <param name="propertyName">The name of the property to set.</param>
+            <param name="propertyValue">The value to convert and set.</param>
+        </member>
+        <member name="T:EC.DateTimeExtensions">
+            <summary>
+            Provides a set of static methods for manipulating <see cref="T:System.DateTime"/> objects.
+            </summary>
+        </member>
+        <member name="M:EC.DateTimeExtensions.MonthStart(System.DateTime)">
+            <summary>
+            Returns the date for the first day of the month.
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC.DateTimeExtensions.MonthEnd(System.DateTime)">
+            <summary>
+            Returns the date for the last day of the month.
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC.DateTimeExtensions.IsYearMonthEqual(System.DateTime,System.DateTime)">
+            <summary>
+            Determines if the year and month of the specified date is equal to the current date's year and month.
+            </summary>
+            <param name="firstDateTime"></param>
+            <param name="secondDateTime"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

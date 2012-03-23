@@ -1,0 +1,10 @@
+C:\Development\Private\Sol Libraries\SOL.Framework\Silverlight\Binaries\SOL.Core.dll
+C:\Development\Private\Sol Libraries\SOL.Framework\Silverlight\Binaries\SOL.Core.pdb
+C:\Development\Private\Sol Libraries\SOL.Framework\Silverlight\SOL.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Private\Sol Libraries\SOL.Framework\Silverlight\SOL.Core\obj\Debug\SOL.Core.dll
+C:\Development\Private\Sol Libraries\SOL.Framework\Silverlight\SOL.Core\obj\Debug\SOL.Core.pdb
+C:\Development\Projects\ecWeb\Sol Libraries\SOL.Framework\Silverlight\Binaries\SOL.Core.dll
+C:\Development\Projects\ecWeb\Sol Libraries\SOL.Framework\Silverlight\Binaries\SOL.Core.pdb
+C:\Development\Projects\ecWeb\Sol Libraries\SOL.Framework\Silverlight\SOL.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Projects\ecWeb\Sol Libraries\SOL.Framework\Silverlight\SOL.Core\obj\Debug\SOL.Core.dll
+C:\Development\Projects\ecWeb\Sol Libraries\SOL.Framework\Silverlight\SOL.Core\obj\Debug\SOL.Core.pdb

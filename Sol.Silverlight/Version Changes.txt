@@ -1,0 +1,38 @@
+﻿TODO
+=====
+
+Version 1.4.0.0 - 2011/07/20 (ECJLE)
+====================================
+* Changed - MessageBoxDialog constructors/static methods to be more logical
+* Added - Icon to MessageBoxDialog (DialogIcon enumeration)
+
+Version 1.3.0.0 - 2011/05/02 (ECJLE)
+====================================
+* Removed - Globals
+* Added - ValueParameterMatchBooleanConverter
+* Added - Predefined format "DateShortTime" to DateTimeFormatConverter
+
+Version 1.2.0.0 - 2011/05/02 (ECJLE)
+====================================
+* Changed - DialogWindow to take a Func<DialogResult,bool> closing handler which can now be used to cancel the closing of the dialog
+
+Version 1.1.0.0 - 2011/03/31 (ECJLE)
+====================================
+* Removed - DateTimeExtensions, EnumExtensions (moved to EC.Core project)
+* Removed - ExpressionHelper (renamed to ReflectionHelper and moved to EC.Core project)
+* Changed - PropertyChangedExtensions to make use of EC.Reflection.ReflectionHelper
+
+Version 1.0.0.0 - 2011/03/02 (ECJLE)
+====================================
+* Added version changes tracking file
+* Added - Assets/Styles/SdkStyles.xaml (and /Themes/Generic.xaml)
+* Added - DateTimeExtensions
+* Added - DelegateCommand
+* Added - DialogEnumerations
+* Added - ExpressionHelper
+* Added - NotifyPropertyChangedBase
+* Added - PropertyChangedExtensions
+* Changed - MessageBoxButtons to DialogButtons; MessageBoxResult to DialogResult
+* Fixed - ValueParameterMatchVisibilityConverter to cater for enumerations
+* Moved - SetterValueBindingHelper to EC.Silverlight.Data namespace
+* Added - ObservableCollectionExtensions
